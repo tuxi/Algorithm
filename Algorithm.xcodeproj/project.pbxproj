@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D076865A24FDE63D00726246 /* XYDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D076865924FDE63D00726246 /* XYDictionary.m */; };
+		D07E810F24FCB6C20071C4C7 /* ReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E810E24FCB6C20071C4C7 /* ReverseList.m */; };
+		D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811124FCD6510071C4C7 /* HeshFind.m */; };
+		D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811424FCDBFE0071C4C7 /* LinkedArray.m */; };
 		D09F7DC424FC918F00CCB629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DC324FC918F00CCB629 /* main.m */; };
+		D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DCE24FCA02200CCB629 /* CharReverse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +28,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D076865824FDE63D00726246 /* XYDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYDictionary.h; sourceTree = "<group>"; };
+		D076865924FDE63D00726246 /* XYDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDictionary.m; sourceTree = "<group>"; };
+		D07E810D24FCB6C20071C4C7 /* ReverseList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseList.h; sourceTree = "<group>"; };
+		D07E810E24FCB6C20071C4C7 /* ReverseList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverseList.m; sourceTree = "<group>"; };
+		D07E811024FCD6510071C4C7 /* HeshFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeshFind.h; sourceTree = "<group>"; };
+		D07E811124FCD6510071C4C7 /* HeshFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeshFind.m; sourceTree = "<group>"; };
+		D07E811324FCDBFE0071C4C7 /* LinkedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedArray.h; sourceTree = "<group>"; };
+		D07E811424FCDBFE0071C4C7 /* LinkedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedArray.m; sourceTree = "<group>"; };
 		D09F7DC024FC918F00CCB629 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09F7DC324FC918F00CCB629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D09F7DCB24FC9D9000CCB629 /* CharReverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharReverse.h; sourceTree = "<group>"; };
+		D09F7DCE24FCA02200CCB629 /* CharReverse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharReverse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				D09F7DC324FC918F00CCB629 /* main.m */,
+				D09F7DCB24FC9D9000CCB629 /* CharReverse.h */,
+				D09F7DCE24FCA02200CCB629 /* CharReverse.m */,
+				D07E810D24FCB6C20071C4C7 /* ReverseList.h */,
+				D07E810E24FCB6C20071C4C7 /* ReverseList.m */,
+				D07E811024FCD6510071C4C7 /* HeshFind.h */,
+				D07E811124FCD6510071C4C7 /* HeshFind.m */,
+				D07E811324FCDBFE0071C4C7 /* LinkedArray.h */,
+				D07E811424FCDBFE0071C4C7 /* LinkedArray.m */,
+				D076865824FDE63D00726246 /* XYDictionary.h */,
+				D076865924FDE63D00726246 /* XYDictionary.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -119,7 +144,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */,
 				D09F7DC424FC918F00CCB629 /* main.m in Sources */,
+				D076865A24FDE63D00726246 /* XYDictionary.m in Sources */,
+				D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */,
+				D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */,
+				D07E810F24FCB6C20071C4C7 /* ReverseList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
