@@ -21,6 +21,13 @@
 
 @implementation LinkedArray
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _count = 0;
+    }
+    return self;
+}
+
 - (void)appendObject:(NSObject *)obj {
     if (!obj) {
         return;

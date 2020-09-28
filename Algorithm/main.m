@@ -10,6 +10,7 @@
 #import "CharReverse.h"
 #import "ReverseList.h"
 #import "XYDictionary.h"
+#import "LRUCache.h"
 
 void testCharReverse() {
     
@@ -47,12 +48,18 @@ void testXYDictionary() {
     NSLog(@"%@",[dict objectForKey:@"数字"]);
 }
 
+void testLRUCache() {
+    [[LRUCache new] test];
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
 //        testCharReverse();
 //        testReverseList();
-        testXYDictionary();
+//        testXYDictionary();
+        
+        testLRUCache();
     }
     return 0;
 }
