@@ -45,12 +45,14 @@ struct CacheNode {
     CacheNode(int k, int v) : key(k), value(v), pre(NULL), next(NULL) {}
 };
 
+
 class LRUCachePrivate {
 private:
     // 缓存策略设置的最大缓存个数
     int size;                     // Maximum of cachelist size.
     // 链表头指针 和 链表尾指针
     CacheNode *head, *tail;
+    // 存储数据的容器map
     map<int, CacheNode *> mp;          // Use hashmap to store
 public:
     LRUCachePrivate(int capacity): size(capacity), head(NULL), tail(NULL) {}
@@ -102,6 +104,7 @@ public:
         }
     }
     
+    // 在链表中删除此结点
     void remove(CacheNode *node)
     {
         if (node -> pre != NULL)

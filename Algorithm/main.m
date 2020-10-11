@@ -11,6 +11,7 @@
 #import "ReverseList.h"
 #import "XYDictionary.h"
 #import "LRUCache.h"
+#import "DoubleLinkedList.h"
 
 void testCharReverse() {
     
@@ -59,7 +60,8 @@ int main(int argc, const char * argv[]) {
 //        testReverseList();
 //        testXYDictionary();
         
-        testLRUCache();
+//        testLRUCache();
+        [DoubleLinkedList test];
     }
     return 0;
 }

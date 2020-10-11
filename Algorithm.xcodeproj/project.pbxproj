@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0533C5A25331C830017134D /* DoubleLinkedList.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0533C5925331C830017134D /* DoubleLinkedList.mm */; };
+		D0533C5F253321190017134D /* DoubleLinked.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0533C5D253321190017134D /* DoubleLinked.cpp */; };
 		D076865A24FDE63D00726246 /* XYDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D076865924FDE63D00726246 /* XYDictionary.m */; };
 		D077A5172521C0BC0098F840 /* LRUCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = D077A5162521C0BC0098F840 /* LRUCache.mm */; };
 		D07E810F24FCB6C20071C4C7 /* ReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E810E24FCB6C20071C4C7 /* ReverseList.m */; };
@@ -29,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D0533C5825331C830017134D /* DoubleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleLinkedList.h; sourceTree = "<group>"; };
+		D0533C5925331C830017134D /* DoubleLinkedList.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DoubleLinkedList.mm; sourceTree = "<group>"; };
+		D0533C5D253321190017134D /* DoubleLinked.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DoubleLinked.cpp; sourceTree = "<group>"; };
+		D0533C5E253321190017134D /* DoubleLinked.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleLinked.hpp; sourceTree = "<group>"; };
 		D076865824FDE63D00726246 /* XYDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYDictionary.h; sourceTree = "<group>"; };
 		D076865924FDE63D00726246 /* XYDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDictionary.m; sourceTree = "<group>"; };
 		D077A5152521C0BC0098F840 /* LRUCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
@@ -88,6 +94,10 @@
 				D076865924FDE63D00726246 /* XYDictionary.m */,
 				D077A5152521C0BC0098F840 /* LRUCache.h */,
 				D077A5162521C0BC0098F840 /* LRUCache.mm */,
+				D0533C5825331C830017134D /* DoubleLinkedList.h */,
+				D0533C5925331C830017134D /* DoubleLinkedList.mm */,
+				D0533C5D253321190017134D /* DoubleLinked.cpp */,
+				D0533C5E253321190017134D /* DoubleLinked.hpp */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -151,7 +161,9 @@
 			files = (
 				D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */,
 				D09F7DC424FC918F00CCB629 /* main.m in Sources */,
+				D0533C5F253321190017134D /* DoubleLinked.cpp in Sources */,
 				D077A5172521C0BC0098F840 /* LRUCache.mm in Sources */,
+				D0533C5A25331C830017134D /* DoubleLinkedList.mm in Sources */,
 				D076865A24FDE63D00726246 /* XYDictionary.m in Sources */,
 				D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */,
 				D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */,
