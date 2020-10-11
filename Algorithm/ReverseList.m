@@ -16,7 +16,7 @@
     // 记录当前尾结点
     struct Node *current = NULL;
     
-    for (int i = 1; i < 5; i++) {
+    for (int i = 1; i < 8; i++) {
         struct Node *node = malloc(sizeof(struct Node));
         node->data = i;
         node->next = NULL;
@@ -53,6 +53,48 @@
     }
     // 返回反转后的链表头结点
     return newH;
+}
+
+// 已知链表头结点指针head，将链表从位置startIndex到endIndex的逆序（不能申请额外的空间）
++ (struct Node *)reverseBetween:(struct Node *)head startIndex:(int)startIndex endIndex:(int)endIndex  {
+    
+    //在原始数据未操作前进行计算修改长度
+    int len = endIndex - startIndex + 1;
+    
+    struct Node *result = head;
+    
+    // 找到startIndex的前一个结点
+    // preHead 用来标记逆序的前一个结点
+    struct Node *preHead = NULL;
+    while (head && --startIndex) {
+        preHead = head;
+        head = head->next;
+    }
+    
+    // 标记逆序链表的头结点
+    struct Node *reverTail = head;
+    // 逆序截止的位置是endIndex - startIndex + 1
+    
+    struct Node *prev = NULL;
+    while (head && len) {
+        struct Node *node = head->next;
+        head->next = prev;
+        prev = head;
+        head = node;
+        len--;
+    }
+  
+    // 完成逆序之后首尾相连问题
+    reverTail->next = head;
+    
+    if (preHead) {
+        // 检查逆序链表开始的位置，返回整个数组的头结点
+        preHead->next = prev;
+    }
+    else {
+        result = prev;
+    }
+    return result;
 }
 
 + (void)printList:(struct Node *)head {

@@ -26,7 +26,17 @@ void testCharReverse() {
 
 void testReverseList() {
     struct Node *list = [ReverseList constructList];
+    printf("原始链表数据为\n");
+    [ReverseList printList:list];
+    printf("\n");
+    // 全部逆序
     struct Node *newList = [ReverseList reverseList:list];
+    printf("完整逆序后的链表数据为\n");
+    [ReverseList printList:newList];
+    
+    // 部分逆序
+    newList = [ReverseList reverseBetween:newList startIndex:1 endIndex:3];
+    printf("逆序1到3的链表数据为\n");
     [ReverseList printList:newList];
     
     LinkedList *linkedList = [[LinkedList alloc] initWithArray:@[@1, @2, @3, @4, @5]];
@@ -57,11 +67,11 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
 //        testCharReverse();
-//        testReverseList();
+        testReverseList();
 //        testXYDictionary();
         
 //        testLRUCache();
-        [DoubleLinkedList test];
+//        [DoubleLinkedList test];
     }
     return 0;
 }

@@ -29,6 +29,8 @@ struct Node {
 
 // 链表反转
 + (struct Node *)reverseList:(struct Node *)head;
+// 已知链表头结点指针head，将链表从位置startIndex到endIndex的逆序（不能申请额外的空间）
++ (struct Node *)reverseBetween:(struct Node *)head startIndex:(int)startIndex endIndex:(int)endIndex;
 // 构造一个链表
 + (struct Node *)constructList;
 // 打印链表中的数据

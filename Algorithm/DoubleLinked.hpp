@@ -17,8 +17,11 @@ using namespace std;
 template <class T>
 struct DNode {
 public:
+    // 数据域
     T value;
+    // 前驱结点指针
     DNode *previous;
+    // 后驱结点指针
     DNode *next;
 public:
     DNode() {}
