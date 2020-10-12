@@ -4,7 +4,7 @@
 //
 //  Created by xiaoyuan on 2020/8/31.
 //  Copyright © 2020 xiaoyuan. All rights reserved.
-//
+//  查找第一个只出现一次的字符
 
 #import "HeshFind.h"
 

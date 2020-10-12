@@ -12,6 +12,7 @@
 #import "XYDictionary.h"
 #import "LRUCache.h"
 #import "DoubleLinkedList.h"
+#import "RecursiveSummation.h"
 
 void testCharReverse() {
     
@@ -67,11 +68,13 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
 //        testCharReverse();
-        testReverseList();
+//        testReverseList();
 //        testXYDictionary();
         
 //        testLRUCache();
 //        [DoubleLinkedList test];
+        
+        [RecursiveSummation test]; 
     }
     return 0;
 }
