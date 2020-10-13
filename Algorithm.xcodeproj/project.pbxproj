@@ -12,6 +12,7 @@
 		D0533CD62534B3C10017134D /* RecursiveSummation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0533CD52534B3C10017134D /* RecursiveSummation.m */; };
 		D076865A24FDE63D00726246 /* XYDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D076865924FDE63D00726246 /* XYDictionary.m */; };
 		D077A5172521C0BC0098F840 /* LRUCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = D077A5162521C0BC0098F840 /* LRUCache.mm */; };
+		D07C20492535A80300F015FB /* MACAddressGen.m in Sources */ = {isa = PBXBuildFile; fileRef = D07C20482535A80300F015FB /* MACAddressGen.m */; };
 		D07E810F24FCB6C20071C4C7 /* ReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E810E24FCB6C20071C4C7 /* ReverseList.m */; };
 		D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811124FCD6510071C4C7 /* HeshFind.m */; };
 		D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811424FCDBFE0071C4C7 /* LinkedArray.m */; };
@@ -42,6 +43,8 @@
 		D076865924FDE63D00726246 /* XYDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDictionary.m; sourceTree = "<group>"; };
 		D077A5152521C0BC0098F840 /* LRUCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRUCache.h; sourceTree = "<group>"; };
 		D077A5162521C0BC0098F840 /* LRUCache.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LRUCache.mm; sourceTree = "<group>"; };
+		D07C20472535A80300F015FB /* MACAddressGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MACAddressGen.h; sourceTree = "<group>"; };
+		D07C20482535A80300F015FB /* MACAddressGen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MACAddressGen.m; sourceTree = "<group>"; };
 		D07E810D24FCB6C20071C4C7 /* ReverseList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseList.h; sourceTree = "<group>"; };
 		D07E810E24FCB6C20071C4C7 /* ReverseList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverseList.m; sourceTree = "<group>"; };
 		D07E811024FCD6510071C4C7 /* HeshFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeshFind.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				D0533C5E253321190017134D /* DoubleLinked.hpp */,
 				D0533CD42534B3C10017134D /* RecursiveSummation.h */,
 				D0533CD52534B3C10017134D /* RecursiveSummation.m */,
+				D07C20472535A80300F015FB /* MACAddressGen.h */,
+				D07C20482535A80300F015FB /* MACAddressGen.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				D077A5172521C0BC0098F840 /* LRUCache.mm in Sources */,
 				D0533CD62534B3C10017134D /* RecursiveSummation.m in Sources */,
 				D0533C5A25331C830017134D /* DoubleLinkedList.mm in Sources */,
+				D07C20492535A80300F015FB /* MACAddressGen.m in Sources */,
 				D076865A24FDE63D00726246 /* XYDictionary.m in Sources */,
 				D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */,
 				D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */,
