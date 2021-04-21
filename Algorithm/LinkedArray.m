@@ -64,6 +64,7 @@
             [self _removeNode:tempNode];
             break;
         }
+        tempNode = tempNode.next;
     }
 }
 

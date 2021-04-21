@@ -12,10 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XYDictionary : NSObject
 
+@property (readonly) NSUInteger count;
+
 + (instancetype)dictionary;
 
 - (void)setObject:(id)obj forKey:(NSString *)key;
-- (nullable NSObject *)objectForKey:(NSString *)key;
+- (nullable id)objectForKey:(NSString *)key;
+- (nullable id)removeObjectForKey:(NSString *)aKey;
 
 @end
 

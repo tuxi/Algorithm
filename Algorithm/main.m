@@ -14,6 +14,7 @@
 #import "DoubleLinkedList.h"
 #import "RecursiveSummation.h"
 #import "MACAddressGen.h"
+#import "ObjcLRLCache.h"
 
 void testCharReverse() {
     
@@ -59,10 +60,18 @@ void testXYDictionary() {
     [dict setObject:@123456 forKey:@"数字"];
     NSLog(@"%@",[dict objectForKey:@"孟"]);
     NSLog(@"%@",[dict objectForKey:@"数字"]);
+    NSLog(@"字典数量: %ld", dict.count);
+    NSLog(@"%@", [dict removeObjectForKey:@"孟"]);
+    NSLog(@"%@", [dict removeObjectForKey:@"数字"]);
+    NSLog(@"字典数量: %ld", dict.count);
 }
 
 void testLRUCache() {
     [[LRUCache new] test];
+    
+    ObjcLRLCache *cache = [[ObjcLRLCache alloc] initWithMaxSize:10];
+    [cache put:@"apple" value:@1000];
+    [cache put:@"xyy" value:@"11000"];
 }
 
 int main(int argc, const char * argv[]) {
@@ -70,9 +79,9 @@ int main(int argc, const char * argv[]) {
         // insert code here...
 //        testCharReverse();
 //        testReverseList();
-//        testXYDictionary();
+        testXYDictionary();
         
-//        testLRUCache();
+        testLRUCache();
 //        [DoubleLinkedList test];
         
 //        [RecursiveSummation test];
@@ -84,75 +93,6 @@ int main(int argc, const char * argv[]) {
 //            printf("%d", imeiNum[i]);
 //        }
 //        printf("\n");
-        
-        NSString *macAddress = [MACAddressGen genMacAddress];
-        macAddress = [macAddress stringByReplacingOccurrencesOfString:@":" withString:@""].uppercaseString;
-        if (macAddress.length > 0) {
-    
-            NSLog(@"随机生成的字符串：%@", [MACAddressGen md5:macAddress]);
-        }
-    
-        __block NSString *appUrl = @"https://ax-log.duizhuang.com/index?a=1&active_id=53166&adspace_id=200042&agent=__UA__&androidid2=__ANDROIDID2__&branch=__BRANCH__&c=28&campaign_id=17203&creative_id=74987&devicetype=APP&e=click&gppid=__GPPID__&hiesid=PUB_0&idfa=__IDFA__&iesid=HUNANTV_0&imemd5=__IMEI__&ip=__IP__&mac=__MAC__&mn=__MN__&openudid=__OPENUDID__&os=__OS__&p=57&ts=__TS__&u=198&uuid=__UUID__&callback=http%3A%2F%2Fpy.da.mgtv.com%2Fdsp%2Fconv%3Fdid%3D2688%26idfa%3D__IDFA__%26mm%3D__IMEI__%26openudid%3D__OPENUDID__%26mac%3D__MAC__%26ip%3D__IP__%26uid%3D__UID__%26os%3D__OS__%26creative_id%3D74987%26convertid%3D4dc380ae34ccf88278d23b75ddab2ce3%26type%3D3%26event_type%3D3%26conv_time%3D__TRD_CONV_TIME__%26source%3D__TRD_SOURCE_%26clktime%3D%7Bclktime%7D%26regtime%3D%7Bregtime%7D";
-        
-        NSArray<NSString *> *replaceList = @[@"__UA__", @"__IMEI__", @"__IP__", @"__MAC__", @"__MN__", @"__OPENUDID__", @"__OS__", @"__TS_", @"__UUID__", @"__UID__", @"__GPPID__"];
-        
-        NSString * deviceModel=@"iPhone6s";
-        // 9e3a1c33a96b3e8149d6a2563d309d4cdad9377b
-        NSString * OpenUDID = [NSString stringWithFormat:@"9e3a1c33a96b%@09d4cdad9377b", [MACAddressGen getRandomStringWithNum:15]];
-        NSString * BSSID=[MACAddressGen genMacAddress]; // 无线网的mac地址
-        
-        [replaceList enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSString *value = @"";
-            NSLog(@"替换_%@", obj);
-            if (![appUrl containsString:obj]) {
-                NSLog(@"不包含:%@", obj);
-                return;
-            }
-            if ([obj isEqualToString:@"__UA__"]) { // User-Agent
-//                UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
-//                NSString *userAgent = [webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"] ?: @"";
-//                value = userAgent;
-                value = @"";
-            }
-            else if ([obj isEqualToString:@"__IMEI__"]) {
-                
-            }
-            else if ([obj isEqualToString:@"__IP__"]) {
-                value = @"100000";
-            }
-            else if ([obj isEqualToString:@"__MAC__"]) {
-                NSString *str = [BSSID stringByReplacingOccurrencesOfString:@":" withString:@""].uppercaseString;
-                if (str.length > 0) {
-                    value = [MACAddressGen md5:str];
-                }
-            }
-            else if ([obj isEqualToString:@"__MN__"]) {
-                value = deviceModel;
-            }
-            else if ([obj isEqualToString:@"__OPENUDID__"]) {
-                value = OpenUDID ?: @"";
-            }
-            else if ([obj isEqualToString:@"__OS__"]) {
-                value = @"1";
-            }
-            else if ([obj isEqualToString:@"__TS__"]) {
-                value = [NSString stringWithFormat:@"%d", (int)[[NSDate date] timeIntervalSince1970]];
-            }
-            else if ([obj isEqualToString:@"__UUID__"]) {
-                value = [MACAddressGen getRandomStringWithNum:20];
-            }
-            else if ([obj isEqualToString:@"__UID__"]) {
-                value = @"";
-            }
-            else if ([obj isEqualToString:@"__GPPID__"]) {
-                value = @"";
-            }
-            if (value.length > 0) {
-                appUrl = [appUrl stringByReplacingOccurrencesOfString:obj withString:value];
-            }
-        }];
-        
-        NSLog(@"%@", appUrl);
     }
     return 0;
 }

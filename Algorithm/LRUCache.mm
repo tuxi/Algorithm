@@ -82,24 +82,34 @@ public:
      **/
     void set(int key, int value)
     {
+        // 从map中查找key对应的vlaue
         map<int, CacheNode *>::iterator it = mp.find(key);
         if (it != mp.end())
         {
+            // 如果找到了，则说明被命中，符合最近最少使用原则（如果数据最近被访问过，那么将来被访问的几率也更高）
             CacheNode *node = it -> second;
             node -> value = value;
+            // 在链表中删除此结点
             remove(node);
+            // 并将此结点插入到链表头部
             setHead(node);
         }
         else
         {
+            // 创建一个新的缓存结点
             CacheNode *newNode = new CacheNode(key, value);
             if (mp.size() >= size)
             {
+                // 如果链表满了，则移除尾部结点
                 map<int, CacheNode *>::iterator iter = mp.find(tail -> key);
+                // 从链表中移除尾部的结点
                 remove(tail);
+                // 从map中擦除尾部这个结点
                 mp.erase(iter);
             }
+            // 将新的结点设置为头结点
             setHead(newNode);
+            // 并保存在map中
             mp[key] = newNode;
         }
     }
@@ -128,6 +138,9 @@ public:
     // 将节点插入到头部的操作
     void setHead(CacheNode *node)
     {
+        // 设置node参数为头结点
+        // 重新连接当前头结点
+        
         node -> next = head;
         node -> pre = NULL;
         

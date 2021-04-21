@@ -16,6 +16,7 @@
 		D07E810F24FCB6C20071C4C7 /* ReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E810E24FCB6C20071C4C7 /* ReverseList.m */; };
 		D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811124FCD6510071C4C7 /* HeshFind.m */; };
 		D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811424FCDBFE0071C4C7 /* LinkedArray.m */; };
+		D09AF8CF263011C0009635C2 /* ObjcLRLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AF8CE263011C0009635C2 /* ObjcLRLCache.m */; };
 		D09F7DC424FC918F00CCB629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DC324FC918F00CCB629 /* main.m */; };
 		D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DCE24FCA02200CCB629 /* CharReverse.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,9 @@
 		D07E811124FCD6510071C4C7 /* HeshFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeshFind.m; sourceTree = "<group>"; };
 		D07E811324FCDBFE0071C4C7 /* LinkedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedArray.h; sourceTree = "<group>"; };
 		D07E811424FCDBFE0071C4C7 /* LinkedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedArray.m; sourceTree = "<group>"; };
+		D09AF8CD263011C0009635C2 /* ObjcLRLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcLRLCache.h; sourceTree = "<group>"; };
+		D09AF8CE263011C0009635C2 /* ObjcLRLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcLRLCache.m; sourceTree = "<group>"; };
+		D09AF8D226301B97009635C2 /* log.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = log.md; sourceTree = "<group>"; };
 		D09F7DC024FC918F00CCB629 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09F7DC324FC918F00CCB629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D09F7DCB24FC9D9000CCB629 /* CharReverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharReverse.h; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		D09F7DC224FC918F00CCB629 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				D09AF8CD263011C0009635C2 /* ObjcLRLCache.h */,
+				D09AF8CE263011C0009635C2 /* ObjcLRLCache.m */,
 				D09F7DC324FC918F00CCB629 /* main.m */,
 				D09F7DCB24FC9D9000CCB629 /* CharReverse.h */,
 				D09F7DCE24FCA02200CCB629 /* CharReverse.m */,
@@ -108,6 +114,7 @@
 				D0533CD52534B3C10017134D /* RecursiveSummation.m */,
 				D07C20472535A80300F015FB /* MACAddressGen.h */,
 				D07C20482535A80300F015FB /* MACAddressGen.m */,
+				D09AF8D226301B97009635C2 /* log.md */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 				TargetAttributes = {
 					D09F7DBF24FC918F00CCB629 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -170,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */,
+				D09AF8CF263011C0009635C2 /* ObjcLRLCache.m in Sources */,
 				D09F7DC424FC918F00CCB629 /* main.m in Sources */,
 				D0533C5F253321190017134D /* DoubleLinked.cpp in Sources */,
 				D077A5172521C0BC0098F840 /* LRUCache.mm in Sources */,
@@ -298,20 +307,37 @@
 		D09F7DC824FC918F00CCB629 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33TS6KJYJJ;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Algorithm/Algorithm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		D09F7DC924FC918F00CCB629 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 33TS6KJYJJ;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Algorithm/Algorithm-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
