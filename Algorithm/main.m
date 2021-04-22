@@ -77,7 +77,7 @@ void testBinarySearch() {
         [array addObject:[NSNumber numberWithInt:base]];
     }
     
-    NSInteger *foundIndex = [Algorithm indexByBinarySearchWithValue:value array:array];
+    NSInteger *foundIndex = [Algorithm binarySearchWithValue:value array:array];
     NSLog(@"%ld", foundIndex);
 }
 
