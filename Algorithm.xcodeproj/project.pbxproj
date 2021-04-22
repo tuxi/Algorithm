@@ -17,6 +17,7 @@
 		D07E811224FCD6510071C4C7 /* HeshFind.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811124FCD6510071C4C7 /* HeshFind.m */; };
 		D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811424FCDBFE0071C4C7 /* LinkedArray.m */; };
 		D09AF8CF263011C0009635C2 /* ObjcLRLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AF8CE263011C0009635C2 /* ObjcLRLCache.m */; };
+		D09AF8D526302C3F009635C2 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AF8D426302C3F009635C2 /* Algorithm.m */; };
 		D09F7DC424FC918F00CCB629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DC324FC918F00CCB629 /* main.m */; };
 		D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DCE24FCA02200CCB629 /* CharReverse.m */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,8 @@
 		D09AF8CD263011C0009635C2 /* ObjcLRLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcLRLCache.h; sourceTree = "<group>"; };
 		D09AF8CE263011C0009635C2 /* ObjcLRLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcLRLCache.m; sourceTree = "<group>"; };
 		D09AF8D226301B97009635C2 /* log.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = log.md; sourceTree = "<group>"; };
+		D09AF8D326302C3F009635C2 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		D09AF8D426302C3F009635C2 /* Algorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		D09F7DC024FC918F00CCB629 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09F7DC324FC918F00CCB629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D09F7DCB24FC9D9000CCB629 /* CharReverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharReverse.h; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				D07C20472535A80300F015FB /* MACAddressGen.h */,
 				D07C20482535A80300F015FB /* MACAddressGen.m */,
 				D09AF8D226301B97009635C2 /* log.md */,
+				D09AF8D326302C3F009635C2 /* Algorithm.h */,
+				D09AF8D426302C3F009635C2 /* Algorithm.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09AF8D526302C3F009635C2 /* Algorithm.m in Sources */,
 				D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */,
 				D09AF8CF263011C0009635C2 /* ObjcLRLCache.m in Sources */,
 				D09F7DC424FC918F00CCB629 /* main.m in Sources */,

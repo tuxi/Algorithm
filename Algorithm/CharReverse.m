@@ -25,17 +25,6 @@
     }
 }
 
-+ (void)reverseWithCString1:(char *)cString {
-    
-    char *begin = cString;
-    char *end = cString + strlen(cString) - 1;
-    
-    while (begin < end) {
-        char temp = *begin;
-        *(begin++) = *end;
-        *(end--) = temp;
-    }
-}
 
 + (NSString *)reverseWithString:(NSString *)string {
     NSMutableString *mutableStr = [NSMutableString string];

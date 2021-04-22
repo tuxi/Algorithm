@@ -15,6 +15,7 @@
 #import "RecursiveSummation.h"
 #import "MACAddressGen.h"
 #import "ObjcLRLCache.h"
+#import "Algorithm.h"
 
 void testCharReverse() {
     
@@ -66,12 +67,30 @@ void testXYDictionary() {
     NSLog(@"字典数量: %ld", dict.count);
 }
 
+void testBinarySearch() {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    int base =0;
+    NSInteger value= arc4random() % 1000;
+    for (int i=1; i < 100; i++) {
+        int temp = arc4random() % 10;
+        base += temp;
+        [array addObject:[NSNumber numberWithInt:base]];
+    }
+    
+    NSInteger *foundIndex = [Algorithm indexByBinarySearchWithValue:value array:array];
+    NSLog(@"%ld", foundIndex);
+}
+
 void testLRUCache() {
     [[LRUCache new] test];
     
     ObjcLRLCache *cache = [[ObjcLRLCache alloc] initWithMaxSize:10];
     [cache put:@"apple" value:@1000];
     [cache put:@"xyy" value:@"11000"];
+    
+    
+    
+    
 }
 
 int main(int argc, const char * argv[]) {
@@ -82,6 +101,7 @@ int main(int argc, const char * argv[]) {
         testXYDictionary();
         
         testLRUCache();
+        testBinarySearch();
 //        [DoubleLinkedList test];
         
 //        [RecursiveSummation test];
