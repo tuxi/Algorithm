@@ -16,6 +16,8 @@
 #import "MACAddressGen.h"
 #import "ObjcLRLCache.h"
 #import "Algorithm.h"
+#import "Blocks.h"
+#import "StringSummation.h"
 
 void testCharReverse() {
     
@@ -87,10 +89,14 @@ void testLRUCache() {
     ObjcLRLCache *cache = [[ObjcLRLCache alloc] initWithMaxSize:10];
     [cache put:@"apple" value:@1000];
     [cache put:@"xyy" value:@"11000"];
-    
-    
-    
-    
+}
+
+void testStringSum() {
+    NSString *str = @"erhg2309wefb452156";
+    NSInteger sum = [StringSummation sumWithString:str];
+    sum = [StringSummation sumWithString1:str];
+    sum = [StringSummation sumWithCString:str.UTF8String];
+    NSLog(@"%ld", sum);
 }
 
 int main(int argc, const char * argv[]) {
@@ -102,6 +108,10 @@ int main(int argc, const char * argv[]) {
         
         testLRUCache();
         testBinarySearch();
+        
+        // 测试Blocks的对象是否会被释放
+        Blocks *block = [Blocks new];
+        
 //        [DoubleLinkedList test];
         
 //        [RecursiveSummation test];
@@ -113,6 +123,10 @@ int main(int argc, const char * argv[]) {
 //            printf("%d", imeiNum[i]);
 //        }
 //        printf("\n");
+//        testStringSum();
+        
+        NSArray *array = @[@10, @8, @10, @6, @18, @2];
+        NSLog(@"%@", [Algorithm bubbleSortWithArray:array]);
     }
     return 0;
 }

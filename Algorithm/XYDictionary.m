@@ -13,7 +13,6 @@
 
 @property (nonatomic, copy) NSString *key;
 @property (nonatomic, strong) id value;
-@property (nonatomic, readwrite) NSUInteger count;
 
 - (instancetype)initWithKey:(NSString *)key value:(id)value;
 
@@ -26,6 +25,15 @@
 
 + (instancetype)dictionary {
     return [self new];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _count = 0;
+    }
+    return self;
 }
 
 - (void)setObject:(id)obj forKey:(NSString *)key {
@@ -123,6 +131,7 @@
     // 默认一个对象占8个字节
 //    NSUInteger index = hash & (sizeof(_keyValues) / 8);
     NSUInteger index = hash % (sizeof(_keyValues) / 8);
+//    NSUInteger index = hash % (_count + 1);
     return index;
 }
 

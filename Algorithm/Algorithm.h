@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 寻找两个Class的最近的公共父类
 + (Class)commonClass:(Class)classA addClass:(Class)classB;
-
+// 冒泡排序, 也是一种交换排序
++ (NSArray<NSNumber *> *)bubbleSortWithArray:(NSArray<NSNumber *> *)array;
 @end
 
 NS_ASSUME_NONNULL_END

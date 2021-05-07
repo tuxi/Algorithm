@@ -18,6 +18,8 @@
 		D07E811524FCDBFE0071C4C7 /* LinkedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E811424FCDBFE0071C4C7 /* LinkedArray.m */; };
 		D09AF8CF263011C0009635C2 /* ObjcLRLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AF8CE263011C0009635C2 /* ObjcLRLCache.m */; };
 		D09AF8D526302C3F009635C2 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AF8D426302C3F009635C2 /* Algorithm.m */; };
+		D09AFB012632719C009635C2 /* Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = D09AFB002632719C009635C2 /* Blocks.m */; };
+		D09C01DE264389DC00C0810C /* StringSummation.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C01DD264389DC00C0810C /* StringSummation.m */; };
 		D09F7DC424FC918F00CCB629 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DC324FC918F00CCB629 /* main.m */; };
 		D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7DCE24FCA02200CCB629 /* CharReverse.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,10 @@
 		D09AF8D226301B97009635C2 /* log.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = log.md; sourceTree = "<group>"; };
 		D09AF8D326302C3F009635C2 /* Algorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		D09AF8D426302C3F009635C2 /* Algorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
+		D09AFAFF2632719C009635C2 /* Blocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blocks.h; sourceTree = "<group>"; };
+		D09AFB002632719C009635C2 /* Blocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blocks.m; sourceTree = "<group>"; };
+		D09C01DC264389DC00C0810C /* StringSummation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringSummation.h; sourceTree = "<group>"; };
+		D09C01DD264389DC00C0810C /* StringSummation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringSummation.m; sourceTree = "<group>"; };
 		D09F7DC024FC918F00CCB629 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09F7DC324FC918F00CCB629 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D09F7DCB24FC9D9000CCB629 /* CharReverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CharReverse.h; sourceTree = "<group>"; };
@@ -120,6 +126,10 @@
 				D09AF8D226301B97009635C2 /* log.md */,
 				D09AF8D326302C3F009635C2 /* Algorithm.h */,
 				D09AF8D426302C3F009635C2 /* Algorithm.m */,
+				D09AFAFF2632719C009635C2 /* Blocks.h */,
+				D09AFB002632719C009635C2 /* Blocks.m */,
+				D09C01DC264389DC00C0810C /* StringSummation.h */,
+				D09C01DD264389DC00C0810C /* StringSummation.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -187,9 +197,11 @@
 				D09AF8CF263011C0009635C2 /* ObjcLRLCache.m in Sources */,
 				D09F7DC424FC918F00CCB629 /* main.m in Sources */,
 				D0533C5F253321190017134D /* DoubleLinked.cpp in Sources */,
+				D09AFB012632719C009635C2 /* Blocks.m in Sources */,
 				D077A5172521C0BC0098F840 /* LRUCache.mm in Sources */,
 				D0533CD62534B3C10017134D /* RecursiveSummation.m in Sources */,
 				D0533C5A25331C830017134D /* DoubleLinkedList.mm in Sources */,
+				D09C01DE264389DC00C0810C /* StringSummation.m in Sources */,
 				D07C20492535A80300F015FB /* MACAddressGen.m in Sources */,
 				D076865A24FDE63D00726246 /* XYDictionary.m in Sources */,
 				D09F7DCF24FCA02200CCB629 /* CharReverse.m in Sources */,

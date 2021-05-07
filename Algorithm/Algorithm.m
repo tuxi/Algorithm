@@ -4,7 +4,7 @@
 //
 //  Created by xiaoyuan on 2021/4/21.
 //  Copyright © 2021 xiaoyuan. All rights reserved.
-//
+//  https://cuijiahua.com/blog/2017/12/algorithm_2.html
 
 #import "Algorithm.h"
 
@@ -44,6 +44,50 @@
     }
     return index;
 }
+
++ (NSArray<NSNumber *> *)bubbleSortWithArray:(NSArray<NSNumber *> *)array {
+    // 冒泡排序是一种交换排序
+    // 它重复地走访要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。
+    if (array.count == 0) {
+        return nil;
+    }
+    NSMutableArray *arrayM = [array mutableCopy];
+    NSNumber *temp = nil;
+    for (NSInteger i = 0; i < arrayM.count - 1; ++i) {
+        // 从后向前依次的比较相邻两个数的大小
+        for (NSInteger j = 0; j < arrayM.count - 1; j++) {
+            // 如果后面的元素小，则交换他们的位置
+            if ([arrayM[j + 1] integerValue] < [arrayM[j] integerValue]) {
+                temp = arrayM[j + 1];
+                arrayM[j + 1] = arrayM[j];
+                arrayM[j] = temp;
+            }
+        }
+    }
+    return arrayM;
+}
+//
++ (NSArray<NSNumber *> *)insertSortWithArray:(NSArray<NSNumber *> *)array {
+    if (array.count == 0) {
+        return array;
+    }
+    NSMutableArray *arrayM = [array mutableCopy];
+    
+    // 第1个数肯定是有序的，从第2个数开始遍历，依次插入有序序列
+    for (int i = 1; i < array.count; i++) {
+        // 取出第i个数，和前i-1个数比较后，插入合适位置
+        NSInteger temp = [arrayM[i] integerValue];
+        // 因为前i-1个数都是从小到大的有序序列，所以只要当前比较的数arrayM[j]比temp大，就把这个数后移一位
+        int j = i - 1;
+        for (j; j >= 0 && [arrayM[j] integerValue] > temp; j--) {
+            arrayM[j + 1] = arrayM[j];
+        }
+        arrayM[j + 1] = @(temp);
+    }
+    return arrayM;
+}
+
+
 
 + (Class)commonClass:(Class)classA addClass:(Class)classB {
     // 获取一个类的所有父类
