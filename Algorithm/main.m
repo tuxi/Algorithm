@@ -99,6 +99,14 @@ void testStringSum() {
     NSLog(@"%ld", sum);
 }
 
+void testAlgorithm() {
+    NSArray *array = @[@10, @8, @10, @6, @18, @2];
+    NSLog(@"%@", [Algorithm bubbleSortWithArray:array]);
+    NSMutableArray *array1 = @[@10, @8, @10, @6, @18, @2, @-100, @6, @-80, @1, @0, @20].mutableCopy;
+    [Algorithm quickSortWithArray:array1];
+    NSLog(@"排序后：%@", array1);
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
@@ -125,8 +133,7 @@ int main(int argc, const char * argv[]) {
 //        printf("\n");
 //        testStringSum();
         
-        NSArray *array = @[@10, @8, @10, @6, @18, @2];
-        NSLog(@"%@", [Algorithm bubbleSortWithArray:array]);
+        testAlgorithm();
     }
     return 0;
 }

@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (Class)commonClass:(Class)classA addClass:(Class)classB;
 // 冒泡排序, 也是一种交换排序
 + (NSArray<NSNumber *> *)bubbleSortWithArray:(NSArray<NSNumber *> *)array;
+// 插入排序
++ (NSArray<NSNumber *> *)insertSortWithArray:(NSArray<NSNumber *> *)array;
+// 快速排序
++ (void)quickSortWithArray:(NSMutableArray<NSNumber *> *)array;
 @end
 
 NS_ASSUME_NONNULL_END
