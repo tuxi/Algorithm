@@ -65,7 +65,9 @@
         }
     }
     return arrayM;
+    
 }
+
 //
 + (NSArray<NSNumber *> *)insertSortWithArray:(NSArray<NSNumber *> *)array {
     if (array.count == 0) {
